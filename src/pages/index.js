@@ -10,7 +10,7 @@ export default function Home({ data }) {
     </header>
     <div>
       {nodes.map(post => (
-        <div>
+        <div key={post.slug}>
           <Link to={post.slug} ><h1>{post.title}</h1></Link>
           <p>{post.description}</p>
         </div>
